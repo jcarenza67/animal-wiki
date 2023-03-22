@@ -9,6 +9,19 @@ window.onload = function() {
     insectFacts.setAttribute("class", "hidden");
     let chimaeraFacts = document.getElementById("realFalse");
     chimaeraFacts.setAttribute("class", "hidden");
+
+    const animal = document.querySelector("input#enterAnimalInput").value;
+
+    if (animal === "turtle") {
+      turtleFacts.removeAttribute("class");
+    } else if (animal === "snake") {
+      snakeFacts.removeAttribute("class");
+    } else if (animal === "insect") {
+      insectFacts.removeAttribute("class");
+    } else {
+      chimaeraFacts.removeAttribute("class");
+    }
+
     event.preventDefault();
-  }
-}
+  };
+};
